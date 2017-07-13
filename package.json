@@ -1,0 +1,47 @@
+{
+  "name": "clock-util",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "clean": "rm {*.d.ts,*.js.map,*.js}",
+    "pretest": "npm run build",
+    "test": "mocha *.test.js",
+    "watch": "tsc --watch & mocha *.test.js --watch",
+    "build:docs": "npx typedoc --out docs --theme minimal index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/js-n/clock-util.git"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "clock",
+    "interface",
+    "extension",
+    "sse",
+    "seconds",
+    "second",
+    "typescript"
+  ],
+  "author": "jsdnxx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/js-n/clock-util/issues"
+  },
+  "homepage": "https://github.com/js-n/clock-util#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.11",
+    "@types/sinon": "^2.3.2",
+    "chai": "^4.1.0",
+    "clock": "^1.0.2",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.7",
+    "typescript": "^2.4.1"
+  }
+}
