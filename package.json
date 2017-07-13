@@ -1,7 +1,7 @@
 {
   "name": "clock-util",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "An extended Clock with additional functionality",
   "main": "index.js",
   "scripts": {
     "prebuild": "npm run clean",
@@ -10,7 +10,8 @@
     "pretest": "npm run build",
     "test": "mocha *.test.js",
     "watch": "tsc --watch & mocha *.test.js --watch",
-    "build:docs": "npx typedoc --out docs --theme minimal index.ts"
+    "build:docs": "npx typedoc --out docs --theme minimal index.ts",
+    "prepack": "npm run build"
   },
   "repository": {
     "type": "git",
